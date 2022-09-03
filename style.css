@@ -1,10 +1,14 @@
+html {
+  font-family: "Play", sans-serif;
+}
 body {
   background-color: lightgrey;
+  margin: 10rem;
 }
 
 header {
-  border: 3px solid black;
   margin: 0 auto;
+  border-radius: 20px;
   padding-top: 2rem;
 
   height: 4rem;
@@ -12,8 +16,40 @@ header {
   opacity: 0.8;
 
   display: flex;
+  justify-content: space-evenly;
   flex-direction: row;
   align-self: center;
 
+  box-shadow: rgba(50, 50, 93, 2.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 5.5) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.355) 0px -2px 6px 0px inset;
   gap: 3rem;
+}
+
+.colorValue {
+  font-size: 2rem;
+
+  display: flex;
+  margin: -2rem;
+}
+
+.red {
+  font-size: 2rem;
+  color: red;
+
+  text-shadow: -1px -1px white, 1px 1px #333;
+}
+
+.blue {
+  font-size: 2rem;
+  color: blue;
+
+  text-shadow: -1px -1px white, 1px 1px #333;
+}
+
+.green {
+  font-size: 2rem;
+  color: green;
+
+  text-shadow: -1px -1px white, 1px 1px #333;
 }
