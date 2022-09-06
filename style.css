@@ -36,6 +36,7 @@ header {
 .red {
   font-size: 2rem;
   color: red;
+  accent-color: red;
 
   text-shadow: -1px -1px white, 1px 1px #333;
 }
@@ -43,6 +44,7 @@ header {
 .blue {
   font-size: 2rem;
   color: blue;
+  accent-color: blue;
 
   text-shadow: -1px -1px white, 1px 1px #333;
 }
@@ -50,6 +52,7 @@ header {
 .green {
   font-size: 2rem;
   color: green;
+  accent-color: green;
 
   text-shadow: -1px -1px white, 1px 1px #333;
 }
