@@ -2,8 +2,8 @@ changeColor();
 
 function changeColor() {
   let red = document.querySelector("#slider-red").value;
-  let green = document.querySelector("#slider-green").value;
   let blue = document.querySelector("#slider-blue").value;
+  let green = document.querySelector("#slider-green").value;
 
   let color = rgbToHex(parseInt(red), parseInt(green), parseInt(blue));
 
@@ -13,14 +13,14 @@ function changeColor() {
 
 function rgbToHex(red, green, blue) {
   let hexRed = red.toString(16);
-  let hexGreen = green.toString(16);
   let hexBlue = blue.toString(16);
+  let hexGreen = green.toString(16);
 
   prefixHex(hexRed);
   prefixHex(hexGreen);
   prefixHex(hexBlue);
 
-  return "#" + prefixHex(hexRed) + prefixHex(hexGreen) + prefixHex(hexBlue);
+  return "#" + prefixHex(hexRed) + prefixHex(hexBlue) + prefixHex(hexGreen);
 }
 
 function prefixHex(hex) {
