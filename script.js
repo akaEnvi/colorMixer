@@ -31,6 +31,22 @@ function prefixHex(hex) {
   }
 }
 
+document.querySelector("button").addEventListener("click", function () {
+  fetch("https://dummy-apis.netlify.app/api/color")
+    .then((response) => {
+      console.log(response.status);
+      console.log(response.ok);
+
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data.color);
+
+      document.body.style.backgroundColor = data.color;
+      document.querySelector("#colorOutput").innerHTML = " " + data.color;
+    });
+});
+
 document.querySelector("#slider-red").addEventListener("input", changeColor);
 document.querySelector("#slider-green").addEventListener("input", changeColor);
 document.querySelector("#slider-blue").addEventListener("input", changeColor);
