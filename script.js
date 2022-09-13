@@ -1,11 +1,11 @@
 changeColor();
 
 function changeColor() {
-  let red = document.querySelector("#slider-red").value;
-  let blue = document.querySelector("#slider-blue").value;
-  let green = document.querySelector("#slider-green").value;
+  const red = document.querySelector("#slider-red").value;
+  const blue = document.querySelector("#slider-blue").value;
+  const green = document.querySelector("#slider-green").value;
 
-  let color = rgbToHex(parseInt(red), parseInt(green), parseInt(blue));
+  const color = rgbToHex(parseInt(red), parseInt(green), parseInt(blue));
 
   document.body.style.backgroundColor = color;
   document.querySelector("#colorOutput").innerHTML = " " + color;
@@ -41,13 +41,19 @@ document.querySelector("button").addEventListener("click", function () {
     })
     .then((data) => {
       console.log(data.color);
+      console.log(data);
 
+      setColor(data.rgb);
       document.body.style.backgroundColor = data.color;
       document.querySelector("#colorOutput").innerHTML = " " + data.color;
-
-      document.querySelector("#slider-red") = color.data;
     });
 });
+
+function setColor({ r, g, b }) {
+  document.querySelector("#slider-red").value = r;
+  document.querySelector("#slider-green").value = g;
+  document.querySelector("#slider-blue").value = b;
+}
 
 document.querySelector("#slider-red").addEventListener("input", changeColor);
 document.querySelector("#slider-green").addEventListener("input", changeColor);
