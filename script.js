@@ -44,6 +44,8 @@ document.querySelector("button").addEventListener("click", function () {
 
       document.body.style.backgroundColor = data.color;
       document.querySelector("#colorOutput").innerHTML = " " + data.color;
+
+      document.querySelector("#slider-red") = color.data;
     });
 });
 
